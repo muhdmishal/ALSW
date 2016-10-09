@@ -61,7 +61,7 @@
         </a>
       </div>
 
-      <!-- Image tile top -->
+      <!-- Image tile Top -->
       <div class="row img-tile">
         <img src="images/top.jpg" alt="Top Banner" class="img-responsive" usemap="#map-top" id="img-top" />
         <map id="map-top" name="map-top">
@@ -73,10 +73,22 @@
           <area shape="rect" coords="665,290,1363,750" href="property.html" alt="Property" title="Property" />
         </map>
       </div>
+
       <div class="row">
         <h2 class="section-title">SOLICITORS FOR YOU AND YOUR FAMILY</h2>
       </div>
 
+      <!-- Image tile Bottom -->
+      <div class="row img-tile">
+        <img src="images/bottom.jpg" alt="Top Banner" class="img-responsive" usemap="#map-bottom" id="img-bottom" />
+        <map id="map-bottom" name="map-bottom">
+          <area shape="rect" coords="0,0,435,288" href="employment.html" alt="Employment" title="Employment" />
+          <area shape="rect" coords="440,0,880,288" href="crime.html" alt="Crime" title="Crime" />
+          <area shape="rect" coords="885,0,1363,288" href="fareevasion.html" alt="Fare Evasion" title="Fare Evasion" />
+          <area shape="rect" coords="0,290,685,745" href="landlordtenant.html" alt="Fare Evasion" title="Landlord & Tenant" />
+          <area shape="rect" coords="688,290,1363,745" href="commercialproperty.html" alt="Commercial Property" title="Commercial Property" />
+        </map>
+      </div>
     </div>
 <br><br>
     <!-- Bootstrap core JavaScript -->
@@ -102,15 +114,15 @@
                 coords[n][m] *= x;
               }
             areas[n].coords = coords[n].join(',');
-          }
-          previousWidth = img.offsetWidth;
-          return true;
-        };
-        window.onresize = this.resize;
-      },
-      imageMap = new ImageMap(document.getElementById('map-top'), document.getElementById('img-top'));
-      imageMap.resize();
-      return;
+            }
+            previousWidth = img.offsetWidth;
+            return true;
+          };
+          window.onresize = this.resize;
+        },
+        imageMap = new ImageMap(document.getElementById('map-top'), document.getElementById('img-top'));
+        imageMap.resize();
+        return;
       }
     </script>
   </body>
