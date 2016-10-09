@@ -53,9 +53,61 @@
           </div><!--/.container-fluid -->
         </nav>
       </div>
+
+      <!-- Logo -->
+      <div class="row">
+        <a href="#" class="col-sm-2 col-sm-offset-5 col-xs-12">
+          <img src="images/logo.jpg" alt="AlettaShaw" class="img-responsive" />
+        </a>
+      </div>
+
+      <!-- Image tile top -->
+      <div class="row img-tile">
+        <img src="images/top.jpg" alt="Top Banner" class="img-responsive" usemap="#map-top" id="img-top" />
+        <map id="map-top" name="map-top">
+          <area shape="rect" coords="0,0,660,470" href="familylaw.html" alt="Family Law" title="Family Law" />
+          <area shape="rect" coords="665,0,1110,285" href="wills.html" alt="Wills" title="Wills" />
+          <area shape="rect" coords="1115,0,1363,285" href="fixedfees.html" alt="Fixed Fees" title="Fixed Fees" />
+          <area shape="rect" coords="0,475,270,750" href="skypemeeting.html" alt="Skype Meeting" title="Skype Meeting" />
+          <area shape="rect" coords="272,475,660,750" href="probate.html" alt="Probate" title="Probate" />
+          <area shape="rect" coords="665,290,1363,750" href="property.html" alt="Property" title="Property" />
+        </map>
+      </div>
     </div>
-    <a href="#" class="col-sm-2 col-md-offset-5">
-      <img src="images/logo.jpg" alt="AlettaShaw" class="img-responsive">
-    </a>
+<br><br>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        var ImageMap = function (map, img) {
+          var n,
+          areas = map.getElementsByTagName('area'),
+          len = areas.length,
+          coords = [],
+          previousWidth = 1363;
+          for (n = 0; n < len; n++) {
+            coords[n] = areas[n].coords.split(',');
+          }
+          this.resize = function () {
+            var n, m, clen,
+            x = img.offsetWidth / previousWidth;
+            for (n = 0; n < len; n++) {
+              clen = coords[n].length;
+              for (m = 0; m < clen; m++) {
+                coords[n][m] *= x;
+              }
+            areas[n].coords = coords[n].join(',');
+          }
+          previousWidth = img.offsetWidth;
+          return true;
+        };
+        window.onresize = this.resize;
+      },
+      imageMap = new ImageMap(document.getElementById('map-top'), document.getElementById('img-top'));
+      imageMap.resize();
+      return;
+      }
+    </script>
   </body>
 </html>

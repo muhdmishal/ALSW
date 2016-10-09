@@ -30,3 +30,6 @@
   color: #fff;
   background-image: none;
 }
+.img-tile img {
+  float: left;
+}
