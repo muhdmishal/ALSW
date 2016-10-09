@@ -120,8 +120,10 @@
           };
           window.onresize = this.resize;
         },
-        imageMap = new ImageMap(document.getElementById('map-top'), document.getElementById('img-top'));
-        imageMap.resize();
+        imageMapTop = new ImageMap(document.getElementById('map-top'), document.getElementById('img-top'));
+        imageMapTop.resize();
+        imageMapBottom = new ImageMap(document.getElementById('map-bottom'), document.getElementById('img-bottom'));
+        imageMapBottom.resize();
         return;
       }
     </script>
