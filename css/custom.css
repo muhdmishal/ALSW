@@ -138,7 +138,7 @@ hr {
   }
 }
 @media (max-width: 768px) and (max-width:1120px) {
-  .navbar-nav>li>a {
+  .navbar-nav>li:not(.social-network) >a {
     width: 100%;
   }
 }
