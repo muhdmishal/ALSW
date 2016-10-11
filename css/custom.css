@@ -77,9 +77,18 @@ p {
 }
 footer {
   background-color: #801424;
-  height: 300px;
+  color: #fff;
+  padding: 20px;
 }
 #img-top,
 #img-bottom {
   width: 100%;
+}
+footer ul li a,
+footer h4 {
+  color: #fff;
+}
+footer ul {
+  padding: 0;
+  list-style:  none;
 }
