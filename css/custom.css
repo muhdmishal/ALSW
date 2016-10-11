@@ -132,3 +132,8 @@ footer .social-network a {
 hr {
   border-top: 1px solid #6f0c1b;
 }
+@media (min-width: 768px) and (max-width:1120px) {
+  .navbar-nav>li>a {
+    padding: 15px 7px;
+  }
+}
