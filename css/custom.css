@@ -62,7 +62,6 @@ a:hover {
   margin: 0;
 }
 .banner {
-  margin-top: 10px;
   margin-bottom: 10px;
 }
 .banner > img {
@@ -141,4 +140,10 @@ hr {
   .navbar-nav>li:not(.social-network) >a {
     width: 100%;
   }
+}
+.logo {
+  margin-bottom: 20px;
+}
+.img-tile-mobile img {
+  width: 100%;
 }
