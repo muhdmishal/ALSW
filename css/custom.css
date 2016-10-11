@@ -76,3 +76,7 @@ footer {
   background-color: #801424;
   height: 300px;
 }
+#img-top,
+#img-bottom {
+  width: 100%;
+}
