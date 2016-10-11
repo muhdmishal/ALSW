@@ -111,3 +111,10 @@ footer h4::after {
   height: 2px;
   background-color: #fff;
 }
+.social-network {
+  text-align: center;
+}
+.social-network a {
+  color: #fff;
+  font-size: 4em !important;
+}
