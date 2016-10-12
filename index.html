@@ -155,16 +155,59 @@
       </div>
 
       <!-- Image tile Top -->
-      <div class="row img-tile hidden-xs">
-        <img src="images/top.jpg" alt="Top Banner" class="img-responsive" usemap="#map-top" id="img-top" />
-        <map id="map-top" name="map-top">
-          <area shape="rect" coords="0,0,660,470" href="familylaw.html" alt="Family Law" title="Family Law" />
-          <area shape="rect" coords="665,0,1110,285" href="wills.html" alt="Wills" title="Wills" />
-          <area shape="rect" coords="1115,0,1363,285" href="fixedfees.html" alt="Fixed Fees" title="Fixed Fees" />
-          <area shape="rect" coords="0,475,270,750" href="skypemeeting.html" alt="Skype Meeting" title="Skype Meeting" />
-          <area shape="rect" coords="272,475,660,750" href="probate.html" alt="Probate" title="Probate" />
-          <area shape="rect" coords="665,290,1363,750" href="property.html" alt="Property" title="Property" />
-        </map>
+      <div class="row">
+        <div class="img-top-tile hidden-xs">
+          <div class="img-map" id="familylaw">
+            <div>
+
+              <a href="zxcz.html">Divorce</a>
+              <a href="#">Separation Agreements</a>
+              <a href="#">Finances</a>
+              <a href="#">Children</a>
+              <a href="#">Unmarried Partners</a>
+              <a href="#">Civil Partnerships</a>
+              <a href="#">Domestic Violence</a>
+              <a href="#">Co-habitation Agreements</a>
+              <a href="#">Pre-nuptial Agreements</a>
+              <a href="#">Legal Terms Explained</a>
+              <a href="#">Blackheaeth Solicitors</a>
+
+            </div>
+          </div>
+
+          <div class="img-map" id="wills">
+            <div>
+
+            </div>
+          </div>
+
+          <div class="img-map" id="fixedfees">
+            <div>
+
+            </div>
+          </div>
+
+          <div class="img-map" id="skypemeeting">
+            <div>
+
+            </div>
+          </div>
+
+          <div class="img-map" id="probate">
+            <div>
+
+            </div>
+          </div>
+
+          <div class="img-map" id="property">
+            <div>
+              <p>
+                sdhkdf kjhkjshdf kjbksd
+              </p>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       <div class="row">
@@ -345,36 +388,27 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Image map resize -->
     <script type="text/javascript">
-      window.onload = function () {
-        var ImageMap = function (map, img) {
-          var n,
-          areas = map.getElementsByTagName('area'),
-          len = areas.length,
-          coords = [],
-          previousWidth = 1363;
-          for (n = 0; n < len; n++) {
-            coords[n] = areas[n].coords.split(',');
-          }
-          this.resize = function () {
-            var n, m, clen,
-            x = img.offsetWidth / previousWidth;
-            for (n = 0; n < len; n++) {
-              clen = coords[n].length;
-              for (m = 0; m < clen; m++) {
-                coords[n][m] *= x;
-              }
-            areas[n].coords = coords[n].join(',');
-            }
-            previousWidth = img.offsetWidth;
-            return true;
-          };
-          window.onresize = this.resize;
-        },
-        imageMapTop = new ImageMap(document.getElementById('map-top'), document.getElementById('img-top'));
-        imageMapTop.resize();
-        imageMapBottom = new ImageMap(document.getElementById('map-bottom'), document.getElementById('img-bottom'));
-        imageMapBottom.resize();
-        return;
+      $( window ).on('load resize',function() {
+        var image_width = $('.img-top-tile').width();
+        var image_height = (image_width/1206)*658;
+        $('.img-top-tile').height(image_height);
+
+        setPosition('#familylaw', 0, 0, image_width*.5155, image_height*.365 );
+        setPosition('#wills', 0, image_width*.487, image_width*.185, image_height*.614 );
+        setPosition('#fixedfees', 0, image_width*.816, 0, image_height*.614 );
+        setPosition('#skypemeeting', image_height*.637, 0, image_width*.801, 0 );
+        setPosition('#skypemeeting', image_height*.637, 0, image_width*.801, 0 );
+        setPosition('#probate', image_height*.637, image_width*.2, image_width*.5155, 0 );
+        setPosition('#property', image_height*.39, image_width*.487, 0, 0 );
+
+
+      });
+      function setPosition(el,top,left,right,bottom) {
+        $(el).css( { 'top': top,
+          'left': left,
+          'right': right,
+          'bottom': bottom
+        } );
       }
     </script>
   </body>

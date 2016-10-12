@@ -13,6 +13,9 @@
     position: relative !important;
   }
 }
+area a:hover {
+  background-color: #000;
+}
 .navbar {
   background-color: #801424;
   background-image: none;
@@ -198,4 +201,82 @@ hr {
 }
 .img-tile-mobile img {
   width: 100%;
+}
+.img-top-tile {
+  background-image: url('../images/top.jpg');
+  width: 100%;
+  background-size: contain;
+  position: relative;
+}
+.img-map {
+  position: absolute;
+}
+.img-map > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-align: center;
+}
+.img-map > div::before,
+.img-map > div::after {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  cursor: pointer;
+}
+.img-map > div::before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+}
+.img-map > div::after {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1,0);
+  transform: scale(1,0);
+}
+.img-map:hover > div::before,
+.img-map:hover > div::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.img-map a {
+  padding: 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0,20px,0);
+  transform: translate3d(0,20px,0);
+}
+.img-map:hover h2,
+.img-map:hover a {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.img-map:hover > div {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.img-map a {
+  clear: both;
+  display: block;
+  color: #fff;
+  z-index: 9999;
 }
