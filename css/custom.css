@@ -184,6 +184,9 @@ footer .social-network a {
   border-left: #801424 solid thin;
 }
 hr {
+ border-top: 1px solid #f3eeef;
+}
+footer hr {
   border-top: 1px solid #6f0c1b;
 }
 @media (min-width: 768px) and (max-width:1120px) {
@@ -291,7 +294,7 @@ hr {
   color: #fff;
 }
 .section {
-  padding: 30px 0px;
+  padding: 50px 0px;
 }
 .bg-primary h1,
 .bg-primary h2,
@@ -316,7 +319,7 @@ hr {
   padding-top: 140px;
 }
 .cost-on-clear-img {
-  margin-bottom: -30px;
+  margin-bottom: -50px;
 }
 h1::after,
 h2::after,
