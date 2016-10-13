@@ -310,6 +310,7 @@ hr {
   right: 0;
   background-color: #fff;
   z-index: 9999;
+  border-bottom: #801424 solid thin;
 }
 .headerfix {
   padding-top: 140px;
