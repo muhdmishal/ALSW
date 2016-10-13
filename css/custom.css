@@ -208,6 +208,12 @@ hr {
   background-size: contain;
   position: relative;
 }
+.img-bottom-tile {
+  background-image: url('../images/bottom.jpg');
+  width: 100%;
+  background-size: contain;
+  position: relative;
+}
 .img-map {
   position: absolute;
 }
@@ -272,7 +278,7 @@ hr {
   transform: translate3d(0,0,0);
 }
 .img-map:hover > div {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .img-map a {
   clear: both;

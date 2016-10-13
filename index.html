@@ -202,7 +202,7 @@
           <div class="img-map" id="property">
             <div>
               <p>
-                sdhkdf kjhkjshdf kjbksd
+
               </p>
             </div>
           </div>
@@ -215,16 +215,41 @@
       </div>
 
       <!-- Image tile Bottom -->
-      <div class="row img-tile hidden-xs">
-        <img src="images/bottom.jpg" alt="Top Banner" class="img-responsive" usemap="#map-bottom" id="img-bottom" />
-        <map id="map-bottom" name="map-bottom">
-          <area shape="rect" coords="0,0,435,288" href="employment.html" alt="Employment" title="Employment" />
-          <area shape="rect" coords="440,0,880,288" href="crime.html" alt="Crime" title="Crime" />
-          <area shape="rect" coords="885,0,1363,288" href="fareevasion.html" alt="Fare Evasion" title="Fare Evasion" />
-          <area shape="rect" coords="0,290,685,745" href="landlordtenant.html" alt="Fare Evasion" title="Landlord & Tenant" />
-          <area shape="rect" coords="688,290,1363,745" href="commercialproperty.html" alt="Commercial Property" title="Commercial Property" />
-        </map>
+      <div class="row">
+        <div class="img-bottom-tile hidden-xs">
+          <div class="img-map" id="employment">
+            <div>
+
+            </div>
+          </div>
+
+          <div class="img-map" id="crime">
+            <div>
+
+            </div>
+          </div>
+
+          <div class="img-map" id="fareevasion">
+            <div>
+
+            </div>
+          </div>
+
+          <div class="img-map" id="landlordtenant">
+            <div>
+
+            </div>
+          </div>
+
+          <div class="img-map" id="commercialproperty">
+            <div>
+
+            </div>
+          </div>
+
+        </div>
       </div>
+
       <!-- Image tile for mobile  -->
       <div class="row visible-xs img-tile-mobile">
 
@@ -389,10 +414,11 @@
     <!-- Image map resize -->
     <script type="text/javascript">
       $( window ).on('load resize',function() {
+
+        // Image top tile.
         var image_width = $('.img-top-tile').width();
         var image_height = (image_width/1206)*658;
         $('.img-top-tile').height(image_height);
-
         setPosition('#familylaw', 0, 0, image_width*.5155, image_height*.365 );
         setPosition('#wills', 0, image_width*.487, image_width*.185, image_height*.614 );
         setPosition('#fixedfees', 0, image_width*.816, 0, image_height*.614 );
@@ -401,6 +427,16 @@
         setPosition('#probate', image_height*.637, image_width*.2, image_width*.5155, 0 );
         setPosition('#property', image_height*.39, image_width*.487, 0, 0 );
 
+        // Image bottom tile.
+        image_width = $('.img-bottom-tile').width();
+        image_height = (image_width/1364)*756;
+        $('.img-bottom-tile').height(image_height);
+
+        setPosition('#employment', 0, 0, image_width*.676, image_height*.615 );
+        setPosition('#crime', 0, image_width*.325, image_width*.347, image_height*.615 );
+        setPosition('#fareevasion', 0, image_width*.655, 0, image_height*.615 );
+        setPosition('#landlordtenant', image_height*.388, 0, image_width*.492, 0 );
+        setPosition('#commercialproperty', image_height*.388, image_width*.508, 0, 0 );
 
       });
       function setPosition(el,top,left,right,bottom) {
