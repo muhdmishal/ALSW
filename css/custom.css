@@ -299,6 +299,7 @@ hr {
 .bg-primary h4,
 .bg-primary h5,
 .bg-primary h6,
-.bg-primary p {
+.bg-primary p,
+.bg-primary a {
   color: #fff;
 }
