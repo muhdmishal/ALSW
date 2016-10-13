@@ -274,7 +274,6 @@ footer hr {
 
 .img-map h2,
 .img-map a {
-  padding: 5px;
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
@@ -351,4 +350,5 @@ h3::after {
 }
 .img-map h2 {
   color: #fff;
+  margin-bottom: 5px;
 }
