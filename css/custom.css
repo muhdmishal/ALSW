@@ -107,6 +107,11 @@ h6,
 a {
   color: #801424;
 }
+h1,
+h2,
+h3 {
+  margin-bottom: 30px;
+}
 a:active,
 a:focus,
 a:hover {
@@ -294,7 +299,7 @@ footer hr {
   color: #fff;
 }
 .section {
-  padding: 50px 0px;
+  padding: 70px 0px;
 }
 .bg-primary h1,
 .bg-primary h2,
@@ -319,7 +324,7 @@ footer hr {
   padding-top: 140px;
 }
 .cost-on-clear-img {
-  margin-bottom: -50px;
+  margin-bottom: -70px;
 }
 h1::after,
 h2::after,
