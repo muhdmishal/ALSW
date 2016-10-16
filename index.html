@@ -163,21 +163,45 @@
       <!-- Image tile for mobile  -->
       <div class="row visible-xs img-tile-mobile">
 
-        <img src="images/commercial_property.jpg" alt="commercial property" class="img-responsive">
+        <div class="mobile-tile">
+          <img src="images/commercial_property.jpg" alt="commercial property" class="img-responsive">
+          <h3>Commercial Property</h3>
+        </div>
 
-        <img src="images/crime.jpg" alt="crime" class="img-responsive">
+        <div class="mobile-tile">
+          <img src="images/crime.jpg" alt="crime" class="img-responsive">
+          <h3>Crime</h3>
+        </div>
 
-        <img src="images/employment.jpg" alt="employment" class="img-responsive">
+        <div class="mobile-tile">
+          <img src="images/employment.jpg" alt="employment" class="img-responsive">
+          <h3>Employment</h3>
+        </div>
 
-        <img src="images/family_law.jpg" alt="family law" class="img-responsive">
+        <div class="mobile-tile">
+          <img src="images/family_law.jpg" alt="family law" class="img-responsive">
+          <h3>Family Law</h3>
+        </div>
 
-        <img src="images/landlord_tenant.jpg" alt="landlord tenant" class="img-responsive">
+        <div class="mobile-tile">
+          <img src="images/landlord_tenant.jpg" alt="landlord tenant" class="img-responsive">
+          <h3>Landlord & Tenant</h3>
+        </div>
 
-        <img src="images/probate.jpg" alt="probate" class="img-responsive">
+        <div class="mobile-tile">
+          <img src="images/probate.jpg" alt="probate" class="img-responsive">
+          <h3>Probate</h3>
+        </div>
 
-        <img src="images/property.jpg" alt="property" class="img-responsive">
+        <div class="mobile-tile">
+          <img src="images/property.jpg" alt="property" class="img-responsive">
+          <h3>Property</h3>
+        </div>
 
-        <img src="images/wills.jpg" alt="wills" class="img-responsive">
+        <div class="mobile-tile">
+          <img src="images/wills.jpg" alt="wills" class="img-responsive">
+          <h3>Wills</h3>
+        </div>
 
       </div>
 
@@ -275,13 +299,12 @@
         var image_width = $('.img-top-tile').width();
         var image_height = (image_width/1206)*658;
         $('.img-top-tile').height(image_height);
-        setPosition('#familylaw', 0, 0, image_width*.5155, image_height*.365 );
-        setPosition('#wills', 0, image_width*.487, image_width*.185, image_height*.614 );
-        setPosition('#fixedfees', 0, image_width*.816, 0, image_height*.614 );
-        setPosition('#skypemeeting', image_height*.637, 0, image_width*.801, 0 );
-        setPosition('#skypemeeting', image_height*.637, 0, image_width*.801, 0 );
-        setPosition('#probate', image_height*.637, image_width*.2, image_width*.5155, 0 );
-        setPosition('#property', image_height*.39, image_width*.487, 0, 0 );
+        setPosition('#familylaw', 0, 0, image_width*.512, image_height*.362 );
+        setPosition('#wills', 0, image_width*.489, image_width*.183, image_height*.612 );
+        setPosition('#fixedfees', 0, image_width*.818, 0, image_height*.612 );
+        setPosition('#skypemeeting', image_height*.64, 0, image_width*.801, 0 );
+        setPosition('#probate', image_height*.64, image_width*.2, image_width*.513, 0 );
+        setPosition('#property', image_height*.39, image_width*.488, 0, 0 );
 
         // Image bottom tile.
         image_width = $('.img-bottom-tile').width();

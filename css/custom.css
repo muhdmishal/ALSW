@@ -352,3 +352,19 @@ h3::after {
   color: #fff;
   margin-bottom: 5px;
 }
+.mobile-tile {
+  position: relative;
+}
+.mobile-tile h3 {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  margin-bottom: 10px;
+  font-weight: bold;  
+}
+.mobile-tile h3::after {
+  display: none;
+}
