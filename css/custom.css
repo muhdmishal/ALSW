@@ -239,6 +239,9 @@ footer hr {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
 }
 .img-map > div::before,
 .img-map > div::after {
@@ -271,18 +274,25 @@ footer hr {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-
-.img-map h2,
 .img-map a {
   opacity: 0;
+  height: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(0,20px,0);
   transform: translate3d(0,20px,0);
 }
-.img-map:hover h2,
+.img-map h2 {
+  opacity: 1;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0,20px,0);
+  transform: translate3d(0,20px,0);
+}
+.img-map h2,
 .img-map:hover a {
   opacity: 1;
+  height: auto;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
@@ -363,7 +373,7 @@ h3::after {
   text-transform: uppercase;
   width: 100%;
   margin-bottom: 10px;
-  font-weight: bold;  
+  font-weight: bold;
 }
 .mobile-tile h3::after {
   display: none;
