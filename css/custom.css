@@ -436,3 +436,10 @@ h3::after {
   border: #e9eaea;
   color: #801424;
 }
+.office img {
+  display: block;
+  margin: auto;
+}
+iframe {
+  width: 100%;
+}
