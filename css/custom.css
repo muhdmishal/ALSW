@@ -1,3 +1,13 @@
+@font-face {
+  font-family:"Lemon/Milk";
+  src:url("fonts/LemonMilk.eot?") format("eot"),
+    url("fonts/LemonMilk.woff") format("woff"),
+    url("fonts/LemonMilk.ttf") format("truetype"),
+    url("fonts/LemonMilk.svg#LemonMilk") format("svg");
+  font-weight:normal;
+  font-style:normal;
+}
+
 @media (min-width: 768px) {
   .navbar .navbar-nav {
     display: inline-block;
@@ -283,13 +293,13 @@ footer hr {
   transform: translate3d(0,20px,0);
 }
 .img-map h2 {
-  opacity: 1;
+  opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(0,20px,0);
   transform: translate3d(0,20px,0);
 }
-.img-map h2,
+.img-map:hover h2,
 .img-map:hover a {
   opacity: 1;
   height: auto;
@@ -303,7 +313,6 @@ footer hr {
   clear: both;
   display: block;
   color: #fff;
-  z-index: 9999;
 }
 .bg-primary {
   background-color: #801424;
@@ -358,9 +367,22 @@ h3::after {
 .img-map h2::after {
   display: none;
 }
+.img-map h1::after {
+  display: none;
+}
 .img-map h2 {
   color: #fff;
   margin-bottom: 5px;
+}
+.img-map h1 {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  font-family: "Lemon/Milk";
+}
+.img-map:hover h1 {
+  display: none;
 }
 .mobile-tile {
   position: relative;
