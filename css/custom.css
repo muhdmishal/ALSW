@@ -271,12 +271,14 @@ footer hr {
   border-bottom: 1px solid #fff;
   -webkit-transform: scale(0,1);
   transform: scale(0,1);
+  z-index: 0;
 }
 .img-map > div::after {
   border-right: 1px solid #fff;
   border-left: 1px solid #fff;
   -webkit-transform: scale(1,0);
   transform: scale(1,0);
+  z-index: 1;
 }
 .img-map:hover > div::before,
 .img-map:hover > div::after {
@@ -291,6 +293,7 @@ footer hr {
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(0,20px,0);
   transform: translate3d(0,20px,0);
+  z-index: 9998;
 }
 .img-map h2 {
   opacity: 0;
