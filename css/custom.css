@@ -264,7 +264,6 @@ footer hr {
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
-  cursor: pointer;
 }
 .img-map > div::before {
   border-top: 1px solid #fff;
@@ -310,12 +309,15 @@ footer hr {
   transform: translate3d(0,0,0);
 }
 .img-map:hover > div {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(128, 20, 36, 0.7);
 }
 .img-map a {
   clear: both;
   display: block;
   color: #fff;
+}
+.img-map a:hover {
+  color: #e9eaea;
 }
 .bg-primary {
   background-color: #801424;
