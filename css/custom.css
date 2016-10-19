@@ -375,6 +375,12 @@ h3::after {
   margin-bottom: 5px;
 }
 .img-map h1 {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  font-family: "Lemon/Milk";
+}
+.img-map h1:not(.primary) {
   color: #fff;
   position: absolute;
   bottom: 0;
