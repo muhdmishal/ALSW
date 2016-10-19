@@ -436,6 +436,9 @@ h3::after {
   border: #e9eaea;
   color: #801424;
 }
+img {
+  margin: auto;
+}
 .office img {
   display: block;
   margin: auto;
