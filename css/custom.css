@@ -424,7 +424,9 @@ h3::after {
   color: #801424;
 }
 .btn-primary:hover,
-.btn-primary.active:hover {
+.btn-primary:focus,
+.btn-primary.active:hover,
+.btn-primary.active:focus {
   background: #e9eaea;
   border: #e9eaea;
   color: #801424;
