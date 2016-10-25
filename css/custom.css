@@ -486,3 +486,11 @@ iframe {
 .star {
   color: gold;
 }
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next,
+.carousel-control .icon-prev {
+  width: 10px;
+  height: 10px;
+  font-size: 10px;
+}
