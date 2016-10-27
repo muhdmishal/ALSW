@@ -1,7 +1,7 @@
 <?php
   include 'DB.php';
 
-  $teamid = 5; // crime id;
+  $teamid = 2; // crime id;
 
   $errorMessage = '';
 
@@ -118,16 +118,16 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li><a href="family.php">Family</a></li>
-              <li><a href="wills.php">Wills & Probate</a></li>
+              <li class="active"><a href="wills.php">Wills & Probate</a></li>
               <li><a href="property.php">Property</a></li>
               <li><a href="employment.php">Employment</a></li>
-              <li class="active"><a href="crime.php">Crime</a></li>
+              <li><a href="crime.php">Crime</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
 
-      <h1>Crime Team</h1>
+      <h1>Wills & Probate Team</h1>
       <?php if ($errorMessage != ''): ?>
         <div class="alert alert-danger alert-dismissible" role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
