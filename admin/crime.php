@@ -1,7 +1,7 @@
 <?php
   include 'DB.php';
 
-  $teamid = 1; // crime id;
+  $teamid = 5; // crime id;
 
   $errorMessage = '';
 
