@@ -163,7 +163,7 @@
               <form class="" action="" method="post" enctype="multipart/form-data">
                 <td>
                   <div class="form-group">
-                    <label for="image">Image</label>
+                    <label for="image">Image <small>Square size</small></label>
                     <input type="file" class="form-control" name="image" id="image" placeholder="Image">
                   </div>
                 </td>
