@@ -78,7 +78,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Login</title>
+    <title>Team</title>
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
@@ -153,7 +153,9 @@
                   <?php echo $row['name'] ?>
                 </td>
                 <td>
-                  <a href="deleteMember.php?id=<?php echo $row['id'] ?>" class="btn btn-danger" title="Delete"><span class="glyphicon glyphicon-trash"></span></a>
+                  <button type="button" name="button" class="btn btn-danger" onclick="deleteMember('<?php echo $row['id'] ?>')">
+                    <span class="glyphicon glyphicon-trash"></span>
+                  </button>
                 </td>
               </tr>
             <?php } ?>
@@ -184,5 +186,16 @@
         </table>
       </div>
     </div>
+    <script type="text/javascript">
+      function deleteMember(id) {
+        var r = confirm("Are you sure you want to delete ?");
+        if (r == true) {
+          $.get("deleteMember.php?id=" + id,
+          function(data, status){
+
+          });
+        }
+      }
+    </script>
   </body>
 </html>
