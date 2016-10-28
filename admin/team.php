@@ -192,7 +192,7 @@
         if (r == true) {
           $.get("deleteMember.php?id=" + id,
           function(data, status){
-
+            location.reload();
           });
         }
       }

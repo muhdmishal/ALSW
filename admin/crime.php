@@ -123,7 +123,9 @@
                   <a href="../<?php echo $row['link'] ?>" target="_blank"> <?php echo $row['name'] ?></a>
                 </td>
                 <td>
-                  <a href="delete.php?id=<?php echo $row['member_id'] ?>" class="btn btn-danger" title="Delete"><span class="glyphicon glyphicon-trash"></span></a>
+                  <button type="button" name="button" class="btn btn-danger" onclick="deleteTeam('<?php echo $row['id'] ?>')">
+                    <span class="glyphicon glyphicon-trash"></span>
+                  </button>
                 </td>
               </tr>
             <?php } ?>
@@ -159,5 +161,16 @@
         </table>
       </div>
     </div>
+    <script type="text/javascript">
+      function deleteTeam(id) {
+        var r = confirm("Are you sure you want to delete ?");
+        if (r == true) {
+          $.get("deleteTeam.php?id=" + id,
+          function(data, status){
+            location.reload();
+          });
+        }
+      }
+    </script>
   </body>
 </html>
