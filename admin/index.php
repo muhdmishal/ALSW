@@ -17,7 +17,7 @@
 
     if ($result->num_rows > 0) {
       $_SESSION['loginStatus'] = true;
-      header('Location: family.php');
+      header('Location: team.php');
     } else {
       $errorMessage = "Please enter the correct username and password.";
     }

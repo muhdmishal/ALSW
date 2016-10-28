@@ -1,7 +1,7 @@
 <?php
   include 'DB.php';
 
-  $teamid = 2; // crime id;
+  $teamid = 2; // Wills id;
 
   $errorMessage = '';
 
@@ -16,55 +16,22 @@
     }
 
     if (isset($_POST['add'])) {
-      $target_dir = "../images/";
-      $target_file = $target_dir . basename($_FILES["image"]["name"]);
-      $uploadOk = 1;
-      $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-
-      // Check if image file is a actual image or fake image
-      $check = getimagesize($_FILES["image"]["tmp_name"]);
-      if($check !== false) {
-        // Check if file already exists
-        if (file_exists($target_file)) {
-            $errorMessage[] = "Sorry, file already exists.";
-            $uploadOk = 0;
-        }
-        // Check file size
-        if ($_FILES["image"]["size"] > 500000) {
-            $errorMessage[] = "Sorry, your file is too large.";
-            $uploadOk = 0;
-        }
-        // Allow certain file formats
-        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-        && $imageFileType != "gif" ) {
-            $errorMessage[] = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-            $uploadOk = 0;
-        }
-      } else {
-          $errorMessage[] = "File is not an image.";
-          $uploadOk = 0;
-      }
-
-      // Check if $uploadOk is set to 0 by an error
-      if ($uploadOk == 0) {
-          $errorMessage[] = "Sorry, your file was not uploaded.";
-      // if everything is ok, try to upload file
-      } else {
-        if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-
-          $name = $_POST['name'];
+          $id = $_POST['id'];
           $link = $_POST['link'];
-          $image = $_FILES["image"]["name"];
-          $sql = "INSERT INTO `tbl_team` (`name`, `image`, `link`, `category`) VALUES ('$name', 'images/$image', '$link', '$teamid')";
+          $sql = "INSERT INTO `tbl_team` (`member_id`, `link`, `category_id`) VALUES ('$id', '$link', '$teamid')";
           $conn->query($sql);
-        } else {
-            $errorMessage[] = "Sorry, there was an error uploading your file.";
-        }
-      }
     }
 
-    $sql = "SELECT * FROM `tbl_team` WHERE `category` = '$teamid' AND `status` = '1'";
+    $sql = "SELECT `tbl_team`.*, `tbl_member`.`name`,`tbl_member`.`image`
+      FROM `tbl_team`
+      INNER JOIN `tbl_member` ON `tbl_member`.`id` = `tbl_team`.`member_id`
+        AND `tbl_member`.`status` = '1'
+      WHERE `tbl_team`.`category_id` = '$teamid'
+        AND `tbl_team`.`status` = '1'";
     $result = $conn->query($sql);
+
+    $sql = "SELECT * FROM `tbl_member` WHERE `status` = '1'";
+    $members = $conn->query($sql);
 
     $conn->close();
 
@@ -81,7 +48,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Login</title>
+    <title>Family Team</title>
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
@@ -117,6 +84,7 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
+              <li><a href="team.php">Team</a></li>
               <li><a href="family.php">Family</a></li>
               <li class="active"><a href="wills.php">Wills & Probate</a></li>
               <li><a href="property.php">Property</a></li>
@@ -140,10 +108,9 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>Profile</th>
-              <th>Name</th>
-              <th></th>
-              <th></th>
+              <th class="col-xs-4">Profile</th>
+              <th class="col-xs-7">Name</th>
+              <th class="col-xs-1"></th>
             </tr>
           </thead>
           <tbody>
@@ -156,10 +123,7 @@
                   <a href="../<?php echo $row['link'] ?>" target="_blank"> <?php echo $row['name'] ?></a>
                 </td>
                 <td>
-
-                </td>
-                <td>
-                  <a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger" title="Delete"><span class="glyphicon glyphicon-trash"></span></a>
+                  <a href="delete.php?id=<?php echo $row['member_id'] ?>" class="btn btn-danger" title="Delete"><span class="glyphicon glyphicon-trash"></span></a>
                 </td>
               </tr>
             <?php } ?>
@@ -167,14 +131,13 @@
               <form class="" action="" method="post" enctype="multipart/form-data">
                 <td>
                   <div class="form-group">
-                    <label for="image">Image</label>
-                    <input type="file" class="form-control" name="image" id="image" placeholder="Image">
-                  </div>
-                </td>
-                <td>
-                  <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" value="" class="form-control" required="">
+                    <label for="image">Member</label>
+                    <select class="form-control" name="id" required="">
+                      <option value="">Select Member</option>
+                      <?php while ($row = $members->fetch_assoc()) { ?>
+                        <option value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>
+                      <?php } ?>
+                    </select>
                   </div>
                 </td>
                 <td>

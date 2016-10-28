@@ -1,8 +1,6 @@
 <?php
   include 'DB.php';
 
-  $teamid = 3; // crime id;
-
   $errorMessage = '';
 
   session_start();
@@ -53,9 +51,8 @@
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
 
           $name = $_POST['name'];
-          $link = $_POST['link'];
           $image = $_FILES["image"]["name"];
-          $sql = "INSERT INTO `tbl_team` (`name`, `image`, `link`, `category`) VALUES ('$name', 'images/$image', '$link', '$teamid')";
+          $sql = "INSERT INTO `tbl_member` (`name`, `image`) VALUES ('$name', 'images/$image')";
           $conn->query($sql);
         } else {
             $errorMessage[] = "Sorry, there was an error uploading your file.";
@@ -63,7 +60,7 @@
       }
     }
 
-    $sql = "SELECT * FROM `tbl_team` WHERE `category` = '$teamid' AND `status` = '1'";
+    $sql = "SELECT * FROM `tbl_member` WHERE `status` = '1'";
     $result = $conn->query($sql);
 
     $conn->close();
@@ -117,9 +114,10 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
+              <li class="active"><a href="team.php">Team</a></li>
               <li><a href="family.php">Family</a></li>
               <li><a href="wills.php">Wills & Probate</a></li>
-              <li class="active"><a href="property.php">Property</a></li>
+              <li><a href="property.php">Property</a></li>
               <li><a href="employment.php">Employment</a></li>
               <li><a href="crime.php">Crime</a></li>
             </ul>
@@ -127,7 +125,7 @@
         </div><!--/.container-fluid -->
       </nav>
 
-      <h1>Property Team</h1>
+      <h1>Team</h1>
       <?php if ($errorMessage != ''): ?>
         <div class="alert alert-danger alert-dismissible" role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -140,10 +138,9 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>Profile</th>
-              <th>Name</th>
-              <th></th>
-              <th></th>
+              <th class="col-xs-2">Profile</th>
+              <th class="col-xs-9">Name</th>
+              <th class="col-xs-1"></th>
             </tr>
           </thead>
           <tbody>
@@ -153,13 +150,10 @@
                   <img src="../<?php echo $row['image'] ?>" class="img-responsive img-circle" alt="" style="max-width:100px;" />
                 </td>
                 <td>
-                  <a href="../<?php echo $row['link'] ?>" target="_blank"> <?php echo $row['name'] ?></a>
+                  <?php echo $row['name'] ?>
                 </td>
                 <td>
-
-                </td>
-                <td>
-                  <a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger" title="Delete"><span class="glyphicon glyphicon-trash"></span></a>
+                  <a href="deleteMember.php?id=<?php echo $row['id'] ?>" class="btn btn-danger" title="Delete"><span class="glyphicon glyphicon-trash"></span></a>
                 </td>
               </tr>
             <?php } ?>
@@ -175,12 +169,6 @@
                   <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" name="name" value="" class="form-control" required="">
-                  </div>
-                </td>
-                <td>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Link to profile</label>
-                    <input type="text" name="link" value="" class="form-control" required="">
                   </div>
                 </td>
                 <td>
