@@ -508,3 +508,7 @@ iframe {
   width: 10%;
   float: left;
 }
+.banner-img img:hover {
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+  filter: grayscale(100%);
+}
