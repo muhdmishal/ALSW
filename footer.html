@@ -4,47 +4,47 @@
       <div class="col-sm-12">
         <h3>Contact Us</h3>
       </div>
-      <form class="" action="" method="post">
+      <form action="contact.php" method="post">
         <div class="col-sm-6">
           <div class="form-group">
-            <label for="exampleInputEmail1">Name</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required="">
           </div>
         </div>
         <div class="col-sm-6">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="">
           </div>
         </div>
         <div class="col-sm-6">
           <div class="form-group">
-            <label for="exampleInputEmail1">Mobile</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Mobile">
+            <label for="mobile">Mobile</label>
+            <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile" required="">
           </div>
         </div>
         <div class="col-sm-6">
           <div class="form-group">
-            <label for="exampleInputEmail1">Office</label><br>
+            <label for="office">Office</label><br>
             <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-primary active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked>Blackheath
-              </label>
               <label class="btn btn-primary">
-                <input type="radio" name="options" id="option2" autocomplete="off"> Bexleyheath
+                <input type="radio" name="office" id="office1" autocomplete="off">Blackheath
+              </label>
+              <label class="btn btn-primary active">
+                <input type="radio" name="office" id="office2" autocomplete="off" checked> Bexleyheath
               </label>
             </div>
           </div>
         </div>
         <div class="col-sm-12">
           <div class="form-group">
-            <label for="exampleInputEmail1">Message</label>
-            <textarea name="message" class="form-control" rows="8" cols="40" placeholder="Message"></textarea>
+            <label for="message">Message</label>
+            <textarea name="message" class="form-control" name="message" rows="8" cols="40" placeholder="Message" required="required"></textarea>
           </div>
         </div>
         <div class="col-sm-6 col-sm-offset-6">
           <div class="form-group">
-            <button type="submit" class="form-control btn btn-primary" name="button"><i class="glyphicon glyphicon-send"></i> Send</button>
+            <button type="submit" class="form-control btn btn-primary" name="button" value="submit"><i class="glyphicon glyphicon-send"></i> Send</button>
           </div>
         </div>
       </form>
