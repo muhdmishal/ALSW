@@ -512,3 +512,6 @@ iframe {
   -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
   filter: grayscale(100%);
 }
+.contact-page > div:first-of-type {
+  display: none;
+}
