@@ -515,3 +515,6 @@ iframe {
 .contact-page > div:first-of-type {
   display: none;
 }
+.section h1 {
+  margin-top: -40px;
+}
