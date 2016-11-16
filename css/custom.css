@@ -419,9 +419,9 @@ h3::after {
   border-radius: 0;
 }
 .btn-primary {
-  background: #fff;
+  background: #801424;
   border: #e9eaea;
-  color: #801424;
+  color: #fff;
 }
 .btn-primary.active {
   background: #e9eaea;
