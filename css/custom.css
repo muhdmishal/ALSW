@@ -153,6 +153,7 @@ p {
   /*-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
   /*filter: grayscale(100%);*/
   width: 100%;
+  height: 200px;
 }
 footer {
   background-color: #801424;
