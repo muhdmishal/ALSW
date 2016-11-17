@@ -548,3 +548,16 @@ iframe {
   border: #e9eaea;
   color: #801424;
 }
+@media (min-width: 768px) {
+  .modal-dialog {
+    margin-top: 150px;
+  }
+}
+.modal-body::after {
+  display: block;
+  content: ' ';
+  clear: both;;
+}
+.modal-content {
+  border-radius: 0;
+}
