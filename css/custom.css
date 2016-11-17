@@ -113,9 +113,11 @@ h2,
 h3,
 h4,
 h5,
-h6,
-a {
+h6 {
   color: #801424;
+}
+a {
+  color: #1b5771;
 }
 h1,
 h2,
@@ -137,12 +139,13 @@ a:hover {
 .banner > img {
   width: 100%;
 }
+.expertise,
 p {
   font-size: 18px;
 }
 .img-profile {
-  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
-  filter: grayscale(100%);
+  /*-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+  /*filter: grayscale(100%);*/
   width: 100%;
 }
 footer {
@@ -515,6 +518,33 @@ iframe {
 .contact-page > div:first-of-type {
   display: none;
 }
-.section h1 {
-  margin-top: -40px;
+.padding-top-none {
+  padding-top: 20px;
+}
+.sidebar h4 {
+  background-color: #1b5771;
+  color: #fff;
+  padding: 10px;
+}
+.sidebar .input-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.input-group-addon {
+  color: #fff;
+  background-color: #801424;
+  border: 1px solid #610b18;
+}
+.sidebar .btn-primary {
+  background: #1b5771;
+  border: #610b18;
+  color: #fff;
+}
+.sidebar > .btn-primary {
+  width: 100%;
+}
+.sidebar .btn-primary.active {
+  background: #e9eaea;
+  border: #e9eaea;
+  color: #801424;
 }

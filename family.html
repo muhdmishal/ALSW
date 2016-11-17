@@ -13,8 +13,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap theme -->
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
     <!-- Font awesome CSS -->
     <link href="css/font-awesome.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -31,6 +30,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/w3data.js"></script>
+    <script src="js/custom.js"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -41,10 +41,10 @@
       <!-- Banner -->
       <div w3-include-html="banner.html"></div>
 
-      <div class="row section">
+      <div class="row section padding-top-none">
         <div class="container">
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-8">
               <h1>Family Solicitors London</h1>
               <p>
                 After the break down of a relationship it can be a very emotional
@@ -61,35 +61,23 @@
                 as possible to prevent you taking actions that could later
                 prejudice your position.
               </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
               <h2>Areas of Expertise</h2>
-            </div>
-            <div class="col-sm-4">
-              <ul>
+              <ul class="expertise">
                 <li><a href="divorce.html">Divorce</a></li>
                 <li><a href="separation-agreements.html">Separation Agreements</a></li>
                 <li><a href="financial-issues.html">Finances</a></li>
                 <li><a href="children-issues.html">Children</a></li>
-              </ul>
-            </div>
-            <div class="col-sm-4">
-              <ul>
+                <li><a href="unmarried-partners.html">Unmarried Partners</a></li>
+                <li><a href="civil-partnerships.html">Civil Partnerships</a></li>
+                <li><a href="domestic-violence.html">Domestic Violence</a></li>
+                <li><a href="co-habitation-agreements.html">Co-habitation Agreements</a></li>
                 <li><a href="unmarried-partners.html">Unmarried Partners</a></li>
                 <li><a href="civil-partnerships.html">Civil Partnerships</a></li>
                 <li><a href="domestic-violence.html">Domestic Violence</a></li>
                 <li><a href="co-habitation-agreements.html">Co-habitation Agreements</a></li>
               </ul>
             </div>
-            <div class="col-sm-4">
-              <ul>
-                <li><a href="pre-nuptial-agreements.html">Pre-nuptial Agreements</a></li>
-                <li><a href="collaborative-law.html">Collaborative Law</a></li>
-                <li><a href="family-glossary.html">Legal Terms Explained</a></li>
-              </ul>
-            </div>
+            <div w3-include-html="sidebar.html"></div>
           </div>
 
           <!-- Team -->
@@ -102,7 +90,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-8">
               <h2>Why Choose Us?</h2>
               <p>
                 Our Family department is headed by our very experienced Patricia Aletta.
@@ -117,11 +105,13 @@
                 right of the screen and we’ll get back to you as soon as we can.
               </p>
             </div>
+
+            <!-- Include the youtube file to the html -->
+            <div w3-include-html="youtube.html"></div>
+
           </div>
         </div>
       </div>
-
-
 
       <!-- Include the footer file to the html -->
       <div w3-include-html="footer.html"></div>
