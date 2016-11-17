@@ -525,6 +525,7 @@ iframe {
   background-color: #1b5771;
   color: #fff;
   padding: 10px;
+  font-weight: bold;
 }
 .sidebar .input-group {
   margin-top: 10px;
