@@ -7,6 +7,12 @@
   font-weight:normal;
   font-style:normal;
 }
+@font-face {
+  font-family:"WalkwayBold";
+  src:url("../fonts/WalkwayBold.ttf") format("truetype");
+  font-weight:normal;
+  font-style:normal;
+}
 
 @media (min-width: 768px) {
   .navbar .navbar-nav {
@@ -525,7 +531,7 @@ iframe {
   background-color: #1b5771;
   color: #fff;
   padding: 10px;
-  font-weight: bold;
+  font-family:"WalkwayBold";
 }
 .sidebar .input-group {
   margin-top: 10px;
