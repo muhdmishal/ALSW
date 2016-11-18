@@ -569,3 +569,9 @@ iframe {
 .modal-content {
   border-radius: 0;
 }
+.facebook {
+  background-color: #3b5998;
+}
+.twitter {
+  background-color: #00abf0;
+}
