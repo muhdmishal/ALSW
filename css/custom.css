@@ -528,19 +528,11 @@ iframe {
   padding-top: 20px;
 }
 .sidebar h4 {
-  color: #fff;
-  font-family:"WalkwayBold";
-  float: left;
-  padding-left: 10px;
-}
-.sidebar .heading {
   background-color: #1b5771;
   color: #fff;
-}
-.sidebar .heading::after {
-  content: ' ';
-  clear: both;
-  display: block;
+  padding: 10px;
+  font-family:"WalkwayBold";
+  margin-top: 0;
 }
 .sidebar .input-group {
   margin-top: 10px;
@@ -577,13 +569,16 @@ iframe {
 .modal-content {
   border-radius: 0;
 }
-.sidebar .facebook {
+.facebook {
   background-color: #3b5998;
-  padding: 10px;
   float: right;
+  padding: 8px;
 }
-.sidebar .twitter {
+.twitter {
   background-color: #00abf0;
-  padding: 10px;
   float: right;
+  padding: 8px;
+}
+.page-title {
+  margin-top: 0;
 }
