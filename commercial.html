@@ -31,6 +31,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/w3data.js"></script>
+    <script src="js/custom.js"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -44,8 +45,21 @@
       <div class="row section">
         <div class="container">
           <div class="row">
-            <div class="col-sm-12">
-              <h1>Company Commercial Solicitors</h1>
+            <div class="col-sm-8">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.alettashaw.com/family.html" class="btn btn-primary facebook" target="_blank">
+                Share
+              </a>
+              <a class="btn btn-primary twitter-share-button twitter"
+                href="https://twitter.com/share"
+                data-size="large"
+                data-text="custom share text"
+                data-url="https://dev.twitter.com/web/tweet-button"
+                data-hashtags="example,demo"
+                data-via="twitterdev"
+                data-related="twitterapi,twitter" target="_blank">
+              Tweet
+              </a>
+              <h1 class="page-title">Company Commercial Solicitors</h1>
               <p>
                 Our Company Commercial team has a wealth of experience across all areas of Company, Commercial and Business Law. We are practical and robust in our approach to business and legal problems in order to achieve the best outcomes for our clients. Legal expertise combined with a deep understanding of practical commerce makes Aletta Shaw the ideal choice across London and the South East.
               </p>
@@ -58,7 +72,7 @@
               <p>
                 Fixed Fee services include:
               </p>
-              <ul>
+              <ul class="expertise">
                 <li>	Initial face-to-face meeting at a place suitable to you.</li>
                 <li>	Forming new companies.</li>
                 <li>	Company secretary services.</li>
@@ -66,6 +80,8 @@
                 <li>	Advising on third party standard terms.</li>
               </ul>
             </div>
+
+            <div w3-include-html="sidebar.html"></div>
           </div>
 
 

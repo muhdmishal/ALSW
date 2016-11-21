@@ -31,6 +31,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/w3data.js"></script>
+    <script src="js/custom.js"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -44,22 +45,29 @@
       <div class="row section">
         <div class="container">
           <div class="row">
-            <div class="col-sm-12">
-              <h1>Divorce Solicitors</h1>
+            <div class="col-sm-8">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.alettashaw.com/family.html" class="btn btn-primary facebook" target="_blank">
+                Share
+              </a>
+              <a class="btn btn-primary twitter-share-button twitter"
+                href="https://twitter.com/share"
+                data-size="large"
+                data-text="custom share text"
+                data-url="https://dev.twitter.com/web/tweet-button"
+                data-hashtags=""
+                data-via="twitterdev"
+                data-related="twitterapi,twitter" target="_blank">
+              Tweet
+              </a>
+              <h1 class="page-title">Divorce Solicitors</h1>
               <p>
                 The breakdown of a marriage can be a distressing time for everyone involved. Our aim is to get you through the legal stages as quickly and as painlessly as possible.
               </p>
               <p>
                 The first step is to call and book an appointment with one of our solicitors. Please contact us either by telephone on <a href="">020 8301 4884</a> or email <a href="">enquiries@alettashaw.co.uk</a>
               </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
               <h2>Areas of Expertise</h2>
-            </div>
-            <div class="col-sm-12">
-              <ul>
+              <ul class="expertise">
 	              <a href="divorce-petition.html">
                   <li>Petitioning for Divorce</li>
                 </a>
@@ -74,6 +82,7 @@
                 </a>
               </ul>
             </div>
+            <div w3-include-html="sidebar.html"></div>
           </div>
 
           <!-- Team -->
