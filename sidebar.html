@@ -1,6 +1,6 @@
 <div class="col-sm-4 sidebar">
-  <h4>Get In Touch With Us </h4>
-  <form class="" action="contact.php" method="post">
+  <h4 class="page-title">Get In Touch With Us </h4>
+  <form class="" action="contact.php" method="post" id="contact" onsubmit="return processForm()">
 
     <div class="input-group">
       <input type="text" class="form-control" id="name" name="name" placeholder="Name" required="" aria-describedby="basic-addon2">
@@ -63,7 +63,7 @@
         <h4 class="modal-title">Request Information Pack</h4>
       </div>
       <div class="modal-body">
-        <form action="contact.php" method="post">
+        <form action="contact.php" method="post" id="contact" onsubmit="return processForm()">
           <div class="col-sm-12">
             <div class="form-group">
               <label for="name">Name</label>
