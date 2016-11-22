@@ -31,6 +31,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/w3data.js"></script>
+    <script src="js/custom.js"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -44,8 +45,21 @@
       <div class="row section">
         <div class="container">
           <div class="row">
-            <div class="col-sm-12">
-              <h1>Residential Landlord Services</h1>
+            <div class="col-sm-8">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.alettashaw.com/family.html" class="btn btn-primary facebook" target="_blank">
+                Share
+              </a>
+              <a class="btn btn-primary twitter-share-button twitter"
+                href="https://twitter.com/share"
+                data-size="large"
+                data-text="custom share text"
+                data-url="https://dev.twitter.com/web/tweet-button"
+                data-hashtags=""
+                data-via="twitterdev"
+                data-related="twitterapi,twitter" target="_blank">
+              Tweet
+              </a>
+              <h1 class="page-title">Residential Landlord Services</h1>
 
               <p>We are able to help Landlords deal with all legal issues arising in relation to their property, from drafting simple tenancy agreements or the granting of a new lease to more complex property disputes giving rise to litigation.</p>
 
@@ -56,7 +70,7 @@
 
               <h3>Our services</h3>
 
-              <ul>
+              <ul class="expertise">
                 <a href="possession-proceedings.html"><li>Possession Proceedings and Eviction</li></a>
                 <li>Removal of squatters</li>
                 <li>Leasehold and service charge disputes</li>
@@ -72,8 +86,10 @@
 
               <p>Should you require advice in relation to any of the above issues, please do not hesitate to contact us on 0208 301 4884 or email us on <a href="mailto:enquiries@alettashaw.co.uk">enquiries@alettashaw.co.uk </a></p>
             </div>
+
+            <div w3-include-html="sidebar.html"></div>
           </div>
-          
+
         </div>
       </div>
 
