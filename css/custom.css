@@ -360,7 +360,7 @@ footer hr {
 .cost-on-clear-img {
   margin-bottom: -70px;
 }
-h1::after,
+/*h1::after,
 h2::after,
 h3::after {
   content: ' ';
@@ -368,8 +368,8 @@ h3::after {
   width: 50px;
   height: 2px;
   background-color: #801424;
-}
-.bg-primary h1::after,
+}*/
+/*.bg-primary h1::after,
 .bg-primary h2::after,
 .bg-primary h3::after {
   content: ' ';
@@ -377,7 +377,7 @@ h3::after {
   width: 50px;
   height: 2px;
   background-color: #fff;
-}
+}*/
 .img-map h3::after {
   display: none;
 }
