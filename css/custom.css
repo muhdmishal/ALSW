@@ -582,3 +582,6 @@ iframe {
 .page-title {
   margin-top: 0;
 }
+.contact-nav {
+  background-image: none;
+}
